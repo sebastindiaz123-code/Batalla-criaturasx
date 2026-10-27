@@ -23,3 +23,24 @@ Diseño
 - `Guerrero`: ataca con `fuerza`; su escudo bloquea la mitad del daño.
 - En todos los casos el daño recibido mínimo es 1 (así la batalla siempre termina).
 - `Main.simularBatalla(c1, c2)`: alterna ataques hasta que una criatura muere, mostrando cada ataque y la salud actual.
+
+# SU EJECUCION ES
+
+
+Con Maven (Java 17+):
+
+```bash
+mvn test                 # ejecuta las pruebas unitarias
+mvn compile exec:java -Dexec.mainClass=Main
+```
+
+Sin Maven:
+
+```bash
+javac -d out src/main/java/*.java
+java -cp out Main
+```
+
+## Flujo de git
+
+Rama `main`; el trabajo se hace en ramas `feature/...` y se integra con Pull Requests.
