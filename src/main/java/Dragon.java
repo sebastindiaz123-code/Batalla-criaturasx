@@ -1,4 +1,4 @@
-/** Dragón: ataque muy fuerte (fuerza * 2) y defensa con escamas (reduce 20% del daño). */
+
 public class Dragon extends Criatura {
 
     private final String escamas;
@@ -17,7 +17,7 @@ public class Dragon extends Criatura {
 
     @Override
     public void defender(int daño) {
-        // Las escamas absorben el 20% del golpe; el daño mínimo siempre es 1
+        
         int real = Math.max(1, (int) (daño * 0.8));
         System.out.println("  " + getNombre() + " se protege con sus escamas de " + escamas + " y recibe " + real);
         recibirDaño(real);

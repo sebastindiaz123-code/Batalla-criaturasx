@@ -1,10 +1,9 @@
-/** Clase principal: crea criaturas y simula batallas entre ellas. */
+
 public class Main {
 
     /**
-     * Simula una batalla por turnos. La criatura1 ataca primero y se alternan
-     * hasta que una muere. Usa polimorfismo: solo conoce el tipo Criatura.
-     *
+      
+     
      * @return la criatura ganadora
      */
     public static Criatura simularBatalla(Criatura criatura1, Criatura criatura2) {

@@ -1,4 +1,4 @@
-/** Mago: ataca con hechizos (fuerza) y se defiende con una barrera mágica (-2 de daño). */
+
 public class Mago extends Criatura {
 
     private final String hechizos;
@@ -17,7 +17,7 @@ public class Mago extends Criatura {
 
     @Override
     public void defender(int daño) {
-        // La barrera mágica reduce 2 puntos; el daño mínimo siempre es 1
+        
         int real = Math.max(1, daño - 2);
         System.out.println("  " + getNombre() + " levanta una barrera mágica y recibe " + real);
         recibirDaño(real);

@@ -1,4 +1,4 @@
-/** Guerrero: ataca con su arma (fuerza) y se defiende con el escudo (reduce 50% del daño). */
+
 public class Guerrero extends Criatura {
 
     private final String arma;
@@ -17,7 +17,7 @@ public class Guerrero extends Criatura {
 
     @Override
     public void defender(int daño) {
-        // El escudo bloquea la mitad del golpe; el daño mínimo siempre es 1
+        
         int real = Math.max(1, daño / 2);
         System.out.println("  " + getNombre() + " bloquea con el escudo y recibe " + real);
         recibirDaño(real);
