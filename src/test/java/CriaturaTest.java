@@ -13,7 +13,7 @@ class CriaturaTest {
     
     @Test
     void criaturaConSaludCeroEstaMuerta() {
-        assertFalse(new Mago("M", 0, 5, "rayo").estaViva());
+        assertFalse(new Mago("M", 0, 5, "fuego").estaViva());
     }
 
     
@@ -104,8 +104,10 @@ class CriaturaTest {
     
     @Test
     void nombreVacioLanzaExcepcion() {
-        assertThrows(IllegalArgumentException.class,
-                () -> new Guerrero("", 100, 10, "espada"));
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> new Guerrero("", 100, 10, "espada")
+        );
     }
 
     
@@ -135,7 +137,19 @@ class CriaturaTest {
     void batallaConCriaturaNulaLanzaExcepcion() {
         Guerrero guerrero = new Guerrero("G", 100, 10, "espada");
 
-        assertThrows(IllegalArgumentException.class,
-                () -> Main.simularBatalla(guerrero, null));
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> Main.simularBatalla(guerrero, null)
+        );
+    }
+
+    
+    @Test
+    void recibirDanioReduceLaSaludCorrectamente() {
+        Guerrero guerrero = new Guerrero("G", 100, 10, "espada");
+
+        guerrero.defender(30);
+
+        assertEquals(85, guerrero.getSalud());
     }
 }
