@@ -1,8 +1,4 @@
-/**
- * Clase abstracta que representa a una criatura genérica del juego.
- * Define los atributos comunes y los comportamientos que cada subclase
- * debe implementar a su manera (polimorfismo).
- */
+
 public abstract class Criatura {
 
     private final String nombre;
@@ -20,13 +16,10 @@ public abstract class Criatura {
         this.fuerza = fuerza;
     }
 
-    /** Ataca a otra criatura. Cada subclase define su forma de atacar. */
+    
     public abstract void atacar(Criatura objetivo);
 
-    /**
-     * Recibe un ataque. Cada subclase define cómo se defiende y cuánto
-     * daño real recibe a partir del daño entrante.
-     */
+    
     public abstract void defender(int daño);
 
     /** @return true si la salud es mayor que 0 */
@@ -34,7 +27,7 @@ public abstract class Criatura {
         return salud > 0;
     }
 
-    /** Resta salud sin permitir valores negativos. Uso interno de las subclases. */
+    
     protected void recibirDaño(int daño) {
         salud = Math.max(0, salud - daño);
     }
